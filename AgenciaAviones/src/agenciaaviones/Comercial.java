@@ -1,0 +1,42 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package agenciaaviones;
+
+/**
+ *
+ * @author USER
+ */
+import java.util.*;
+public class Comercial extends Aviones {
+
+    private final int numMaxPasajeros;
+    private int numPasajeros = 0;
+    private final ArrayList<Pasajero> pasajeros = new ArrayList<>();
+
+    public Comercial(int numMaxPasajeros, int velocidad, String matricula) {
+        super(velocidad, matricula);
+        this.numMaxPasajeros = numMaxPasajeros;
+    }
+
+    public void addPasajero(Pasajero pasajero) {
+        System.out.println("Agregando a... "+pasajero.getNombre()+"...");
+        if (numPasajeros != numMaxPasajeros) {
+            pasajeros.add(pasajero);
+            numPasajeros++;
+        } else {
+            System.out.println("Avión comercial lleno. No es posible agregar a "+ pasajero.getNombre() );}
+
+    }
+
+    @Override
+    public void Visualisar() {
+        System.out.println("Avión comercial matrícula: " + this.getMatricula() + ", capacidad: " + this.numMaxPasajeros + ", Velocidad: " + this.getVelocidad() + " Km/h");
+        pasajeros.forEach((auxpas) -> {
+            System.out.println(auxpas.toString());
+        });
+    }
+}
+
