@@ -7,7 +7,7 @@ package agenciaaviones;
 
 /**
  *
- * @author USER
+ * @author Edwin Alejandro Buitrago Vega
  */
 public class AgenciaAviones {
 

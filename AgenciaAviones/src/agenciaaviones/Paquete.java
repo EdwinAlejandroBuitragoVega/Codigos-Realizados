@@ -7,7 +7,7 @@ package agenciaaviones;
 
 /**
  *
- * @author USER
+ * @author Edwin Alejandro Buitrago Vega
  */
 public class Paquete {
     private final String nombre;
